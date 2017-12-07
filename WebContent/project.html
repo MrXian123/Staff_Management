@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<link rel="stylesheet" type="text/css" href="css.css">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>员工管理系统</title>
+	</head>
+
+	<body class="body">
+		<div class="divon">
+			<div class="text">员工管理系统</div>
+			<div class="login">
+				<div class="lleft">
+					<div class="llleft"><img src="image/three.png" style="width:100%;height:100%;" /> </div>
+				</div>
+				<div class="lright"><input class="toptext" placeholder="用户名" name="user" type="text" style="width:200px;height:25px" />
+					<input class="toptextone" placeholder="密码" name="password" type="password" style="width:200px;height:25px" />
+					<div>
+						<form action="">
+						
+							<input class="button  button1" name="login" type="submit" id="username" onfocus="clearmessage()"  value="登录" style="width:70px;height:28px" />
+							<input class="button1"  type="submit" value="取消" onclick="closeWindow()" id="password"  style="width:70px;height:28px" />
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.post("/example/jquery/demo_test_post.asp",
+    {
+      name:"Donald Duck",
+      city:"Duckburg"
+    },
+    function(data,status){
+      alert("数据：" + data + "\n状态：" + status);
+    });
+  });
+});
+</script>
+</html>
